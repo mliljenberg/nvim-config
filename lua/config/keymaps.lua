@@ -34,6 +34,8 @@ end, { desc = "Append to harpoon list" })
 vim.keymap.set("n", "<C-q>", function()
   harpoon.ui:toggle_quick_menu(harpoon:list())
 end)
+
+vim.keymap.set("v", "<leader>p", '"_dP', { desc = "Paste without changing buffer" })
 --
 -- vim.keymap.set("n", "<C-h>", function()
 --   harpoon:list():select(1)

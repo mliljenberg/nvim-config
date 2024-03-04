@@ -272,6 +272,7 @@ return {
       })
     end,
   },
+
   {
     "CopilotC-Nvim/CopilotChat.nvim",
     opts = {
