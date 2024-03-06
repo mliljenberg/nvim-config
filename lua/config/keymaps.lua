@@ -40,8 +40,8 @@ vim.keymap.set("v", "<leader>p", '"_dP', { desc = "Paste without changing buffer
 -- Initialize a global variable to track Copilot's state. Assuming it starts as enabled.
 vim.g.copilot_enabled = true
 
--- Define the toggle function.
-local function toggle_copilot()
+-- Map the toggle function to <leader>cC in normal mode.
+vim.keymap.set("n", "<leader>cC", function()
   if vim.g.copilot_enabled then
     -- If Copilot is enabled, disable it.
     vim.cmd("Copilot disable")
@@ -53,11 +53,6 @@ local function toggle_copilot()
     vim.g.copilot_enabled = true
     print("Copilot enabled")
   end
-end
-
--- Map the toggle function to <leader>cC in normal mode.
-vim.keymap.set("n", "<leader>cC", function()
-  toggle_copilot()
 end, { noremap = true, silent = true, desc = "Toggle Copilot" })
 
 --
